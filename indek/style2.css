@@ -1,0 +1,1295 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Titillium Web,sans-serif;
+    box-sizing: border-box;
+}
+body{
+    
+    background-color: #f3ecf5;}
+
+.navwrapper{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 110;
+}
+.navbar{
+   
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    background: #f3ecf5;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    line-height: 2.5rem;
+    letter-spacing: 0px;
+    display: flex;
+    align-items: center;
+}
+.innernavbar{
+    display: flex;
+    align-items: center;
+    max-width: 64rem;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logoimg{
+    padding-top: 12px;
+   width: 100px;    
+}
+.midnav{
+   color:  #593070;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 600;
+}
+.midnav a{
+    padding: 0 10px;
+    border: 1px solid transparent;
+}
+.midnav a:hover{
+    border: 1px solid #593070;
+    border-radius: 35px;
+}
+.endnav{
+    background: linear-gradient(to right,#e35015, 50%, #DC781C);;
+    padding: 0rem 1rem;
+    border-radius: 35px;
+    color: whitesmoke;
+}
+.endnav:hover{
+    background: #432355;
+}
+a{
+    cursor: pointer;
+    text-decoration: none;
+}
+.bgimgwrapper{
+    height: 60vh;
+    background-position: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    overflow: hidden;
+    min-height: 60vh;
+
+}
+.bgimgspan{
+    box-sizing: border-box;
+    display: block;
+    overflow: hidden;
+}
+.bgimg{
+   
+    position: absolute;
+    overflow: hidden;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    min-height: 60vh;
+    height: 60vh;
+    object-fit: cover;
+}
+.imgspan{
+    padding:2rem ;
+    z-index: 1;
+    color: black;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   height: 60vh;
+   background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.35));
+    color: white;
+    gap: 1rem;
+   
+}
+.imgspan h2{
+    font-size: 2rem;
+}
+.imgspan p{
+    font-size: 1.25rem;
+}
+.imgspan a{
+font-size: 1.5rem;
+text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-position: under;
+}
+.imgspan a:hover{
+    color: #c394d4;
+}
+.citywrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.4rem;
+    margin-left: 2.5rem;
+    font-size: 13;
+}
+.innercitywrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.locationwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+   
+}
+.locationwrappercolor{
+    color: #f3ecf5;
+}
+.card{
+   display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 60%;
+   min-height: 170%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    z-index: 1;
+    border-radius: 15px;
+}
+.cardcontainer{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 2rem;
+}
+.cardcontainerheading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000d5; 
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+.cardcontainercity{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+.citycard{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-self: center;
+    transition: transform .3s;
+}
+.citycard:hover{
+    transform: scale(1.05);
+}
+.citycard span{
+    font-weight: 600;
+    color: #000000dc;
+}
+.cityimgcontainer{
+    margin-inline: auto;
+    width: 5rem;
+    height: 5rem;
+    
+    border-radius: 0.8rem;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    
+}
+.cityimg{
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: initial;
+    height: initial;
+    background: none;
+    opacity: 1;
+    border: 0px;
+    margin: 0px;
+    bottom: 50px;
+    right: 30px;
+    padding: 0px;
+    position: relative;
+   
+}
+.locationwrapper:hover .card{
+    display: block;
+    
+}
+.icon1{
+    width: 1rem;
+}
+.cityname{
+    font-weight: 600;
+    text-decoration:underline;
+    text-decoration-style: dashed;
+    text-underline-position: under
+   
+}
+.servicecategorycontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   z-index: 2;
+}
+.servicecategorywrapper{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+   
+    background: #593070;
+    border-radius: 0.5rem;
+    width: 100%;
+    
+    padding: 1rem 1.5rem;
+    gap: 25px;
+    box-shadow: 0 0 9px 0 rgba(0,0,0,.2);
+}
+.servicecardcontainer{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.inputcontainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    border-right: 1px solid gray;
+    padding: 0 1rem;
+    gap: 3px;
+}
+.inputcontainer input{
+   border: transparent;
+    outline: none;
+    max-width: 5rem;
+    font-size: 10px;
+    padding: 4px  7px;
+    border-radius: 15px;
+}
+.inputcontainer label{
+    color: whitesmoke;
+    font-size: 14px;
+}
+.simgcontainer{
+    max-width: 10rem;
+}
+.simg{
+    background: rgba(227, 80, 21, 0.1);
+    border-radius: 1rem;
+    width: 100%;
+}
+.sfont{
+    color: #f3ecf5;
+    font-size: small;
+    font-weight: 600;
+}
+.burgericon{
+    width: 29px;
+    color: #593070;
+}
+.ourservices{
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    padding: 1.5rem 0rem 4rem;
+}
+.ourservicesheading{
+    font-size: 19px;
+    color: #6f1d87;
+    font-weight: 900;
+    
+}
+.ourfeedbackheading{
+    font-size: 19px;
+    font-weight: 600;
+    color: rgb(221, 194, 243);
+}
+.ourservicescontainer{
+    gap: 2rem;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  
+}
+.ourfeedbackcontainer{
+    gap: 2rem;
+    width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  
+}
+.ourservicescardwrapper{
+    max-width: 70rem;
+    margin: 5px 20px;
+    
+}
+.ourfeedbackcardwrapper{
+    max-width: 85rem;
+    margin: 5px 20px;
+    
+}
+.ourservicescard1{
+    background: conic-gradient(from 180deg at 50% 50%,#aa0047 0deg,#8a59f2 90deg,#aa0047 1turn),#8a59f2;
+    background: #6f1d87;
+    padding: 1.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+    
+   color: #fff;
+   font-weight: 600;
+   max-width: 15rem;
+   min-width: 12rem;
+  border-radius: 15px;
+}
+.ourfeedbackcard1{
+    background: transparent;
+    padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+    border: 1px solid rgb(243, 198, 252);
+   color: #ffffffd2;
+ 
+   max-width: 15rem;
+   min-width: 12rem;
+   
+    border-radius: 15px;
+}
+.ourfeedbackcard1:hover{
+    background: linear-gradient(142.75deg,hsla(0,0%,100%,0),hsla(0,0%,100%,.08));
+}
+.clientspan{
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+.clientinfo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.personspan{
+    background-color: #00aa3a;
+    max-width: 30px;
+    border-radius: 35px;
+}
+.personimg{
+    width: 100%;
+    border-radius: 35px;
+}
+.ourservicescard2{
+    padding: 1.5rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #6f1d87;
+   color: #fff;
+   font-weight: 600;
+   max-width: 15rem;
+   min-width: 12rem;
+  
+    border-radius: 15px;
+    
+}
+.cardheading{
+    font-size: 19px;
+    padding:0rem 2.5rem;
+}
+.cardbtn1{
+    font-size: 11px;
+   color: rgb(230, 230, 230);
+   background-color: rgba(220, 220, 220, 0.514);
+  max-width: 100px;
+  padding: 3px 5px;
+  border-radius: 0px 35px 35px 0px;
+}
+.cardbtn2{
+    font-size: 12px;
+   color: rgb(230, 230, 230);
+   background-color: rgba(220, 220, 220, 0.514);
+  max-width: 50px;
+  padding: 3px 5px;
+  border-radius: 0px 35px 35px 0px;
+}
+.cardarrow{
+    max-width: 55px;
+   display: flex;
+   align-items: center;
+    background-color: rgba(220, 220, 220, 0.514);
+    border-radius: 35px;
+    margin-left: 3.5rem;
+    padding: 0rem 1rem;
+    
+}
+.cardarrowicon{
+    width: 30px;
+    color: #fff;
+    
+}
+.footersection{
+    background: #3b2344;
+    color: #fff;
+}
+.footerwrapper{
+    max-width: 90rem;
+    margin: auto;
+    padding: 2.8rem 0 1rem;
+}
+
+.footer2{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding: 0 3.6rem 1rem;
+    gap: 3rem;
+}
+.footercompanyinfo{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-size: 13px;
+}
+.footercompanyinfo div{
+    width: 2.5rem;
+}
+.footercompanylink{
+    display: flex;
+    flex-direction: column;
+    gap:1.5rem;
+}
+
+.footerheading{
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 140%;
+}
+.qllist{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    gap:1rem;
+}
+.qllist2{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    gap:1rem;
+    margin-top: 3rem;
+}
+
+.footer3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3.6rem;
+}
+.socialmediaicons{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: flex-start;
+}
+.socialmedialogo{
+    border-radius: 50%;
+   background-color: #fff;
+    width: 30px;
+    color: white;
+}
+.crlogo{
+    border-radius: 50%;
+   background-color: #fff;
+    width: 1rem;
+    color: white;
+}
+.footer3span{
+    color: rgba(165, 164, 164, 0.667);
+    display: flex;
+    gap:4px ;
+    font-size: 10px;
+}
+.footer1small{
+    display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0 3.6rem 4.8rem;
+        gap: 3rem;
+}
+.footer1small1{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.midsection{
+    width: 100%;
+    background: linear-gradient(154.48deg,#000,#040a1a);
+    background: linear-gradient(45deg, rgba(91,47,110,1) 56%, rgba(218,78,0,1) 100%);
+    position: relative;
+    overflow: hidden;
+}
+.footprints{
+    text-align: center;
+    color: #fff;
+    line-height: 5.6rem;
+   font-size: 4rem;
+    
+}
+.footprintstitle{
+    max-width: 30rem;
+    margin: 4rem auto 1rem;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+}
+.footprintsbox{
+    background: linear-gradient(45deg, rgba(91,47,110,1) 56%, rgba(218,78,0,1) 100%);
+    border: 2px solid transparent;
+    border-radius: 5px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: inline-block;
+    margin-bottom: 4rem;
+    margin-inline: 2rem;
+}
+.footprintsboxtitle{
+    border-radius: 5px;
+    background: #29032c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    padding: 0.5rem 1rem;
+    line-height: 2.8rem;
+    text-align: start;
+    text-shadow: 0 0 transparent;
+}
+.growthcontainer{
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(4,minmax(max-content,30rem));
+    justify-content: center;
+    align-items: stretch;
+    padding-bottom: 2.5rem;
+    max-width: 70rem;
+}
+.growthitem{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px dashed hsla(0,0%,100%,.16);
+}
+.growthnum{
+    font-weight: 600;
+    font-size: 2rem;
+}
+.growthtext{
+    font-size: 1rem;
+    line-height: 1rem;
+    color: hsla(0,0%,100%,.64);
+}
+.mapcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1rem;
+    gap: 2rem;
+}
+.mapwrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 30rem;
+    max-height: 35rem;
+
+}
+.mapspan{
+    font-weight: 500;
+    max-width: 35rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: rgb(214, 212, 212);
+    font-size: medium;
+    line-height: 2rem;
+}
+.faqsection{
+   
+    margin-top: 2rem;
+   
+}
+.faqsectionwrapper{
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    padding: 2rem 1rem;
+}
+.faqtitle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem auto;
+    max-width: 40rem;
+}
+.faqheading{
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #292929;
+}
+.faqsubheading{
+    color: rgb(95, 91, 91);
+    font-size: 13px;
+}
+.faqcontainer{
+   padding-top: 2rem;
+}
+.faqitem{
+   flex-wrap: nowrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.ques{
+    font-size: 15px;
+    color: #000000d3;
+}
+.faqarrow{
+    width: 20px;
+    color:rgb(94, 93, 93);
+}
+.faqbox{
+    max-width: 25rem;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid rgba(158, 154, 154, 0.774);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ans{
+    display: none;
+    font-size: small;
+    color: gray;
+}
+.faqbox:hover .ans{
+    display: block;
+}
+.vehicleinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.vehicleinfoheading{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000e1;
+}
+.vehicleinfocontainer{
+    border-radius: 7px;
+    padding: 2rem 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    max-width: 60rem;
+    background-color: white;
+    gap: 1rem;
+}
+.vehicleimgcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.twowheeler{
+    width: 15rem;
+}
+.vehicleinfospan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.vehicleinfospan1{
+    font-size: 1.rem;
+    color: rgba(0, 0, 0, 0.849);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.vehicleinfospan2{
+font-size: smaller;
+padding: 2px 15px;
+background-color: #593070ad;
+border-radius: 25px;
+margin-bottom: 10px;
+}
+.vehicleinfospan3{
+font-size: 1rem;
+margin-bottom: 10px;
+}
+.vehicleinfospan3 span{
+    font-weight: 600;
+}
+.vehicleinfospan4{
+    font-size: 13px;
+    color: #000000e5;
+    margin-bottom: 15px;
+}
+.vehicleinfospan5{
+    color: #3b2344;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-position:under
+}
+
+.truckspan1flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.truckinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 1rem;
+   
+}
+.truckinfocontainer{
+    border-radius: 7px;
+    padding: 0rem 1rem 1rem 2rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    max-width: 60rem;
+    background-color: white;
+    gap: 1rem;
+}
+.truckflex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.truckimgcontainer{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+}
+.truck{
+    width: 15rem;
+}
+.truckinfospan{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.truckinfospan1{
+    font-size: 1.rem;
+    color: rgba(0, 0, 0, 0.849);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.truckinfospan2{
+font-size: smaller;
+padding: 2px 15px;
+background-color: #593070ad;
+border-radius: 25px;
+margin-bottom: 10px;
+}
+.truckinfospan3{
+font-size: 1rem;
+margin-bottom: 10px;
+}
+.truckinfospan3 span{
+    font-weight: 600;
+}
+.truckinfospan4{
+    font-size: 13px;
+    color: #000000e5;
+    margin-bottom: 15px;
+}
+.truckinfospan5{
+    color: #3b2344;
+    font-size: 15px;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    text-underline-position:under
+}
+.truck{
+    width: 10rem;
+}
+
+
+.section3{
+    margin-top: 2.5rem;
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.section3heading{
+   
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000e1;
+}
+
+.section3contentheading{
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000e1;
+}
+.section3contentp{
+    color: #000000da;
+    font-size: 13px;
+}
+.offersection{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.offersectionheading{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000e1;
+}
+.offersectioncontent{
+    background-color: white;
+    border-radius: 17px;
+    padding: 1rem;
+    border-image-source: linear-gradient(to left, rgba(91,47,110,1), rgba(218,78,0,1));
+    border-bottom: 5px;
+    border-image-slice: 1;
+    border-bottom-style: dashed;
+    max-width: 13rem;
+    padding-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.offersectioncontentspan1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+.offersectioncontentspan1 span{
+    color: rgb(207, 1, 1);
+}
+.offersectioncontentspan1 p{
+    background: linear-gradient(to right,#e35015, #DC781C);;
+    padding: 1px 4px;
+    border-radius: 4px;
+    
+}
+.offersectioncontentspan2{
+font-size: 16px;
+font-weight: 600;
+}
+.offersectioncontentspan3{
+font-size: 11px;
+}
+.areas{
+   
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.areas p{
+    line-height: 2rem;
+  font-size: 13px;
+    text-align: center;
+    max-width: 47rem;
+}
+.areasheading{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #000000e1;
+}
+@media screen and (min-width: 569px){
+    .section3content{
+        row-gap: 2rem;
+        column-gap: 2rem;
+        max-width: 50rem;
+        display: grid;
+        grid-template-rows:    repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 1023px){
+    .servicecategorywrapper{
+      max-width: 60rem;
+      min-height: 12rem;
+      padding: 1rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .hidesupport{
+        display:none;
+    }
+    .footer1imgs{
+       display: flex;
+
+    }
+    .footer1{
+        display: none;
+    }
+    .footer1small1 a{
+        max-width: 80%;
+        min-width: 5rem;
+    }
+.footer1img{
+    max-width:  80%;
+    max-height: 90%;
+}
+.footer3{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+    
+   }
+@media screen and (min-width: 1024px){
+    .servicecategorywrapper{
+      max-width: 60rem;
+      min-height: 10rem;
+      padding: 1rem 3rem 1rem;
+      margin-bottom: 1rem;
+    }
+    .footer1{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        padding: 0 3.6rem 0.8rem;
+        gap: 3rem;
+    }
+    .footer1imgs{
+        display: flex;
+        flex-direction: column;
+        gap:1.5rem;
+    }
+    .footer1{
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        padding: 0 3.6rem 0.5rem;
+        gap: 3rem;
+    }
+    .footer1small{
+        display: none;
+    }
+    
+.footer1img{
+    width: 13rem;
+}
+   }
+   @media screen and (min-width: 600px) and (max-width: 666px){
+    .card{
+        top: 160%;
+    }
+   }
+   @media screen and (min-width: 560px) and (max-width: 600px){
+    .card{
+        top: 170%;
+    }
+   }
+   @media screen and (min-width: 453px) and (max-width: 560px){
+    .card{
+        top: 230%;
+    }
+   }
+   @media screen and (min-width: 260px) and (max-width: 453px){
+    .card{
+        top: 200%;
+    }
+   }
+   
+   @media screen and (min-width: 667px) and (max-width: 879px){
+    .card{
+        top: 110%;
+    }
+   }
+   @media screen and (max-width: 859px){
+.servicecategorycontainer{
+    display: none;
+}
+
+.estimatebtn2{
+    top: 90vh;
+    width: 80%;
+    position: absolute;
+  top: 90vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+    z-index: 8;
+    background: #dfbae9;
+    display: flex;
+    flex-direction: row;
+    
+    border-radius: 9px;
+  padding: 1rem 2rem;
+    cursor: pointer;
+    height: auto;
+    
+   justify-content: space-between;
+   
+   position: fixed;
+}
+.estimatebtn2:hover{
+    background: #d6a0e6;
+}
+.span12{
+    color: #593070;
+    font-weight: 600;
+    font-size: 22px;
+}
+.span2{
+    display: none;
+    color: #593070cb;
+    font-size: 13px;
+}
+.estimatebtnwrapper2{
+    display: flex;
+   flex-direction: row;
+}
+.arrowicon2{
+    width: 25px;
+    color: #593070;
+}
+   }
+   @media screen and (max-width: 568px)
+   {.span1flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.truckflex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.vehicleinfospan4{
+    display: none;
+}
+.vehicleinfocontainer{
+    padding-right: 4px;
+    gap: 0;
+}
+.twowheeler{
+    width: 12rem;
+}
+.section3content{
+    row-gap: 2rem;
+    column-gap: 2rem;
+    max-width: 50rem;
+    display: grid;
+    grid-template-rows:    repeat(4, auto);
+    
+}
+}
+@media screen and (min-width: 560px){
+   .servicecategorycontainer{
+    position: relative;
+    bottom: 5rem;
+   }
+   .servicecardwrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 5px;
+   }
+   .categorycard{
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0.5rem;
+    padding: 1rem;
+    min-width: 4rem;
+    max-width: 9rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.7rem 1rem;
+    width: 10rem;
+    border-radius: 1rem;
+    transition: transform .3s;
+    cursor: pointer;
+    gap: 5px;
+   }
+.categorycard:hover{
+    transform: scale(1.05) ;
+}
+
+   .burgericon{
+    display: none;
+   }
+   .ourservicescontainer{
+    margin-top: -4rem;
+    max-width: 70rem;
+   }
+   .ourfeedbackcontainer{
+    
+    max-width: 70rem;
+   }
+   
+.estimatebtn{
+    background: #dfbae9;
+    display: flex;
+    justify-content: flex-start;
+    padding: 1rem 1rem 1.25rem;
+    width: 9rem;
+    border-radius: 1rem;
+    transition: transform .3s;
+   
+   
+    min-height: 100%;
+    cursor: pointer;
+    gap: 25px;
+}
+.estimatebtn:hover{
+    transform: scale(1.05);
+}
+.span1{
+    color: #593070;
+    font-weight: 600;
+    font-size: 15px;
+}
+.span2{
+    color: #593070cb;
+    font-size: 11px;
+}
+.estimatebtnwrapper{
+    display: flex;
+    flex-direction: column;
+}
+.arrowicon{
+    width: 32px;
+    color: #593070;
+}
+}
+@media screen and (min-width: 860px){
+    .estimatebtn2{
+        display: none;
+    }
+}
+@media screen and (max-width: 559px){
+.servicecardwrapper{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+    gap: 5px;
+    align-items: start;
+}
+.growthcontainer{
+    grid-template-columns: auto auto;
+}
+.growthitem{
+    padding: 1rem 1.5rem;
+    
+}
+.borderb{
+    border-bottom: 1px dashed hsla(0,0%,100%,.16);
+}
+.borderrdel{
+    border-right: none;
+}
+.mapwrapper{
+    display: none;
+}
+
+ .endnav,.midnav{
+    display: none;
+}
+
+}
+@media screen and (max-width: 419px){
+    .ourservicescardcontainer {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        width: 100%;
+    }
+    }
+    @media screen and (max-width: 657px){
+
+        .ourfeedbackcardcontainer {
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 1rem;
+            width: 100%;
+        }
+        }
+        @media screen and (min-width: 658px){
+            .ourfeedbackcardcontainer {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 1rem;
+                width: 100%;
+            }
+           
+            }
+   
+@media screen and (min-width: 420px){
+        .ourservicescardcontainer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            width: 100%;
+        }
+       
+        }
+        
